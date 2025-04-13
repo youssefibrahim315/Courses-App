@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.14.
 
+
+## This project using new feature in angular 18 and lazy component for navigate pages
+## using clean code [ solid && Dry ] principles
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
