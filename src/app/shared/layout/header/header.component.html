@@ -1,0 +1,20 @@
+<header class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      
+      <div class="navbar-brand logo">
+        <img src="./icons/logo 1.svg" width="121px" height="46px" alt="Logo" routerLink="/" />
+      </div>
+  
+
+      <div class="navbar-actions d-flex align-items-center gap-3">
+        <div class="cart-icon position-relative" routerLink="/shopping-cart">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">{{cartService.getCartItems().length}}</span>
+        </div>
+  
+        <button class="btn btn-outline-primary">Log In</button>
+        <button class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
+  </header>
+  

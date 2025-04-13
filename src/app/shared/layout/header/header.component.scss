@@ -1,0 +1,58 @@
+.custom-navbar {
+
+    background-color: #FFFFFF;
+    padding-right: 40px;
+    padding-left: 40px;
+    gap: 10px;
+
+    .navbar-brand{
+        cursor: pointer;
+    }
+    .navbar-actions {
+        .cart-icon {
+            font-size: 1.4rem;
+            color: #00b2ff;
+            position: relative;
+            cursor: pointer;
+            .cart-badge {
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                background-color: orange;
+                color: white;
+                border-radius: 50%;
+                font-size: 0.6rem;
+                padding: 2px 5px;
+            }
+        }
+
+        .btn {
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 6px;
+
+            &.btn-outline-primary {
+                font-family: Inter;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0%;
+                color: #00B8FF;
+
+                &:hover {
+                    background-color: unset;
+                }
+            }
+
+            &.btn-primary {
+                font-family: Inter;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0%;
+                color: #FFFFFF;
+                ;
+            }
+        }
+    }
+}

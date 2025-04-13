@@ -1,0 +1,37 @@
+.order-complete {
+  .order-complete-title {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #0f172a;
+  }
+  .order-complete-desc {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #0f172a;
+  }
+  .confirm {
+    max-width: 400px;
+    width: 100%;
+    .icon-circle {
+      font-size: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #16a34a;
+      color: #ffffff;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      
+
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<section id="checkout" class="px-5">
+    <h3 class="fw-bold">Checkout Page</h3>
+    <nav class="breadcrumb small">
+        <a class="breadcrumb-item"  routerLink="/" >Details</a>
+        <a class="breadcrumb-item" routerLink="/shopping-cart" >Shopping Cart</a>
+        <span class="breadcrumb-item active">Checkout</span>
+    </nav>
+
+    <div class="row p-0 m-0 mt-3">
+
+        <div class="col-12 col-lg-8">
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="card p-3 shadow-sm">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="country" class="form-label">Country *</label>
+                        <input type="text" id="country" formControlName="country" class="form-control"
+                            placeholder="Enter Country">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="state" class="form-label">State/Union Territory *</label>
+                        <input type="text" id="state" formControlName="state" class="form-control"
+                            placeholder="Enter State">
+                    </div>
+                </div>
+
+                <h6 class="mt-3 fw-bold">Payment Method</h6>
+
+                <div class="border rounded p-3 mb-3">
+                    <div class="form-check mb-3">
+                        <input type="radio" class="form-check-input" checked disabled>
+                        <label class="form-check-label fw-semibold">Credit/Debit Card</label>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa"
+                            height="25" class="ms-2 me-1">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                            alt="Mastercard" height="25">
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <input type="text" formControlName="cardName" class="form-control"
+                                placeholder="Name of card *">
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" formControlName="cardNumber" class="form-control"
+                                placeholder="Card Number *">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" formControlName="expiry" class="form-control"
+                                placeholder="Enter Expiry Date *">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" formControlName="cvc" class="form-control" placeholder="Enter CVC/CVV *">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-12 col-lg-4">
+            <div class="order">
+                <h6 class="fw-bold text-secondary">Order Details</h6>
+                <div class="card order-details p-3">
+                    <ul class="list mb-3">
+                        <li class="d-flex justify-content-between">
+                            <span class="text-gray">Price</span>
+                            <span class="currency">{{ totalPrice | currency:'USD' }}</span>
+                        </li>
+                        <li class="discount d-flex justify-content-between">
+                            <span class="text-gray">Discount</span>
+                            <span class="currency">-{{ totalDiscount | currency:'USD' }}</span>
+                        </li>
+                        <li class="tax d-flex justify-content-between">
+                            <span class="text-gray">Tax</span>
+                            <span class="currency">{{ tax | currency:'USD' }}</span>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total</span>
+                        <span>{{ total | currency:'USD' }}</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3 w-100" routerLink="/order-complete" >Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,82 @@
+#courses-details {
+  .left-card {
+    .breadcrumb {
+      // width: 44px;
+      height: 21px;
+      padding-right: 2px;
+      padding-left: 2px;
+      gap: 8px;
+      top: 1.5px;
+      font-size: 15px;
+    }
+
+    .description {
+      background: #f8fafc;
+      //   width: 778px;
+      height: 412px;
+      gap: 10px;
+      padding: 20px;
+
+      .description-title {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        letter-spacing: -2%;
+        color: #0f172a;
+      }
+
+      .description-text {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0%;
+        color: #334155;
+      }
+    }
+  }
+
+  .right-card {
+    .card {
+      width: 400px;
+      height: 588px;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 16px;
+      border-width: 1px;
+
+      .split {
+        border-width: 1px;
+        border: 1px solid #E2E8F0
+      }
+      .share{
+        
+        font-family: Inter;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 160%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: #0F172A;
+
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+img {
+  border-radius: 0.5rem;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+
+// .container {
+//     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+// }

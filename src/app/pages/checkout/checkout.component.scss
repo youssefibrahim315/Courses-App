@@ -1,0 +1,38 @@
+.order{
+    // display: flex;
+    overflow: hidden;
+    .order-details {
+        max-width: 330px;
+        height: 213px;
+        border-radius: 8px;
+        border-width: 1px;
+        background: #F8FAFC;
+    
+        .list{
+            border-radius: 8px;
+            border-width: 1px;
+            // border: 1px solid #E2E8F0;
+            padding: 0px;
+            .currency{
+                font-family: Inter;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 160%;
+                letter-spacing: 0%;
+                text-align: right;
+    
+                color: #0F172A;
+    
+    
+            }
+            .discount{}
+            .tax{}
+        }
+    }
+    .btn{
+        // width: 330px;
+        max-width: 330px;
+
+    }
+
+}

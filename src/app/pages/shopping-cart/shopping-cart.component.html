@@ -1,0 +1,70 @@
+<section id="shopping-cart" class="px-5">
+    <nav aria-label="breadcrumb px-5">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/" >Categories</a></li>
+            <li class="breadcrumb-item"><a routerLink="courses-details">Details</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+        </ol>
+    </nav>
+
+    <h2 class="fw-bold">Shopping Cart</h2>
+    <p>{{ courses.length }} Course(s) in cart</p>
+
+    <div class="row m-0 p-0">
+        <div class="col-md-8">
+            @for (course of courses; track $index ;let i = $index ;let count = $count) {
+            <div class="card shopping-card p-3 mb-3">
+                <div class="d-flex gap-3">
+                    <div class="position-relative">
+                        <img [src]="course.image" class="rounded" width="120" height="80" alt="Course Image">
+                        <span class="badge  position-absolute top-0 start-0">-{{ course.discount |
+                            currency:'USD' }}</span>
+                    </div>
+                    <div class="course-details flex-grow-1">
+                        <h5 class="course-title fw-bold mb-1">{{ course.title }}</h5>
+                        <p class="course-author mb-1">By {{ course.author }}</p>
+                        <div class="d-flex align-items-center gap-2 small text-muted">
+                            <span class="text-warning">★★★★★</span>
+                            <span>{{ course.hours }} Total Hours. {{ course.lectures }} Lectures. {{ course.level
+                                }}</span>
+                        </div>
+                        <a  (click)="removeCourse(i)" class="text-danger btn mt-1 d-inline-block">Remove</a>
+                    </div>
+                    <div class="course-price fw-bold text-end ms-auto">
+                        {{ course.price | currency:'USD' }}
+                    </div>
+                </div>
+            </div>
+
+            }
+        </div>
+
+        <div class="col-md-4">
+            <div class="order">
+                <h5 class="fw-bold text-secondary">Order Details</h5>
+                <div class="card order-details p-3">
+                    <ul class="list mb-3">
+                        <li class="d-flex justify-content-between">
+                            <span class="text-gray">Price</span>
+                            <span class="currency">{{ totalPrice | currency:'USD' }}</span>
+                        </li>
+                        <li class="discount d-flex justify-content-between">
+                            <span class="text-gray">Discount</span>
+                            <span class="currency">-{{ totalDiscount | currency:'USD' }}</span>
+                        </li>
+                        <li class="tax d-flex justify-content-between">
+                            <span class="text-gray">Tax</span>
+                            <span class="currency">{{ tax | currency:'USD' }}</span>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="currency d-flex justify-content-between fw-bold mb-3">
+                        <span>Total</span>
+                        <span>{{ total | currency:'USD' }}</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-3 w-100" routerLink="/checkout" >Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</section>

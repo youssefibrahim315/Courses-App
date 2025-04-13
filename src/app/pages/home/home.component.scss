@@ -1,0 +1,158 @@
+@mixin ring($size, $border) {
+    width: $size;
+    height: $size;
+    border: $border solid #d1f1ff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+}
+
+.hero-section {
+
+    .hero-title {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 64px;
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+
+        .highlight {
+            color: #00b2ff;
+        }
+
+
+    }
+
+    .Left-hero-circles-container {
+        position: relative;
+
+        .circles-container {
+            position: absolute;
+            left: 190px;
+            top: 30px;
+
+            .ring {
+                &.ring-1 {
+                    @include ring(100px, 1px);
+                    bottom: 0px;
+                    right: 15px;
+                }
+
+                &.ring-2 {
+                    @include ring(130px, 1px);
+                    bottom: -15px;
+                    right: 0px;
+                }
+
+                &.ring-3 {
+                    @include ring(160px, 1px);
+                    bottom: -30px;
+                    right: -15px;
+                }
+
+                &.ring-4 {
+                    @include ring(190px, 1px);
+                    bottom: -45px;
+                    right: -30px;
+                }
+            }
+        }
+    }
+
+    .hero-text {
+        color: #777E90;
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+    }
+
+    .right-hero-container {
+        position: relative;
+
+        .circles-container {
+            width: 369px;
+            height: 364px;
+            border-width: 1px;
+
+            // top: 119px;
+            // left: 733px;
+            &.ring-0 {
+                @include ring(500px, 1px);
+                bottom: -40px;
+                right: -30px;
+            }
+
+            .outer-circle {
+                background-color: #00B8FF;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 1px;
+                z-index: 1;
+            }
+
+            .student-image-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                overflow: hidden;
+                z-index: 2;
+
+                .student-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .dot {
+                position: absolute;
+                background-color: #00b2ff;
+                border-radius: 50%;
+                z-index: 0;
+
+                &.dot-sm {
+                    width: 31px;
+                    height: 31px;
+                    bottom: -20px;
+                    left: 10px;
+                }
+
+                &.dot-md {
+                    width: 16px;
+                    height: 16px;
+                    bottom: -60px;
+                    left: -50px;
+                }
+            }
+
+            .ring {
+
+                &.ring-1 {
+                    @include ring(200px, 1px);
+                    bottom: -40px;
+                    right: -30px;
+                }
+
+                &.ring-2 {
+                    @include ring(230px, 1px);
+                    bottom: -55px;
+                    right: -45px;
+                }
+
+                &.ring-3 {
+                    @include ring(260px, 1px);
+                    bottom: -70px;
+                    right: -60px;
+                }
+            }
+        }
+
+        
+    }
+}
