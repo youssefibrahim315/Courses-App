@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## This project using new feature in angular 18 and lazy component for navigate pages
 ## using clean code [ solid && Dry ] principles
-
+## All calculations are done automatically.
 
 ## Development server
 
