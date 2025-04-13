@@ -16,7 +16,7 @@
             <div class="card shopping-card p-3 mb-3">
                 <div class="d-flex gap-3">
                     <div class="position-relative">
-                        <img [src]="course.image" class="rounded" width="120" height="80" alt="Course Image">
+                        <img [src]="course.image" class="rounded" width="120" height="80" alt="Course Image" loading="lazy">
                         <span class="badge  position-absolute top-0 start-0">-{{ course.discount |
                             currency:'USD' }}</span>
                     </div>

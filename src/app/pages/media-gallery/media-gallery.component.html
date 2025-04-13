@@ -14,12 +14,12 @@
         <div class="col-md-8 d-flex justify-content-center align-items-center gallery-wrapper">
             <!-- prev -->
             <div class="gallery-card prev-card" *ngIf="getImage(currentIndex - 1)">
-                <img [src]="getImage(currentIndex - 1)" class="img-fluid rounded">
+                <img [src]="getImage(currentIndex - 1)" class="img-fluid rounded" loading="lazy">
             </div>
 
             <!-- main -->
             <div class="gallery-card main-card position-relative">
-                <img [src]="getImage(currentIndex)" class="img-fluid rounded">
+                <img [src]="getImage(currentIndex)" class="img-fluid rounded" loading="lazy">
                 <span class="zoom-icon">
                     <i class="bi bi-arrows-fullscreen"></i>
                 </span>
@@ -27,7 +27,7 @@
 
             <!-- next -->
             <div class="gallery-card next-card" *ngIf="getImage(currentIndex + 1)">
-                <img [src]="getImage(currentIndex + 1)" class="img-fluid rounded">
+                <img [src]="getImage(currentIndex + 1)" class="img-fluid rounded" loading="lazy">
             </div>
 
             <!-- nav  -->
