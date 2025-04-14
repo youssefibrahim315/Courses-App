@@ -36,8 +36,8 @@
                 </div>
 
                 <div class="d-grid gap-2 mt-3">
-                    <button class="btn btn-outline-primary" (click)="cartService.addToCart(course)">Add To Cart</button>
-                    <button class="btn btn-primary " [disabled]="cartService.existsInCart(course)"
+                    <button class="btn btn-outline-primary" (click)="cartService.addToCart(course)">{{!cartService.existsInCart(course)?'Add To':'Remove From'}} Cart</button>
+                    <button class="btn btn-primary " 
                         routerLink="/shopping-cart">Buy Now</button>
                 </div>
                 <hr class="split">

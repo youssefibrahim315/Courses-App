@@ -22,7 +22,7 @@
                     <img [src]="course.image" class="card-img-top" [alt]="course.title" height="150px" loading="lazy">
                     <span *ngIf="course.discount" class="badge bg-pink position-absolute top-0 end-0 m-2">- ${{ course.discount }}</span>
                     <div class="badge bg-wight position-absolute bottom-0 start-0 m-2">
-                      <i class="bi bi-cart3  {{cartService.existsInCart(course) ?'text-danger':''}}" (click)="cartService.addToCart(course)"></i>
+                      <i class="bi bi-cart3 h4  {{cartService.existsInCart(course) ?'text-danger':''}}" (click)="cartService.addToCart(course)"></i>
                     </div>
                   </div>
                   <a class="card-body" [routerLink]="[ '/courses-details', course.id ]">
